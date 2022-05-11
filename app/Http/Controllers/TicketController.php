@@ -26,9 +26,9 @@ class TicketController extends Controller
         //
         $ticket = new Ticket();
         $ticket->title = $request->title;
-        $ticket->Category = $request->Category;
+        $ticket->category = $request->category;
         $ticket->prioity = $request->prioity;
-        $ticket->Message = $request->Message;
+        $ticket->message = $request->message;
         $ticket->save();
 
         return redirect()->route('index.ticket');
@@ -40,9 +40,12 @@ class TicketController extends Controller
      * @param  \App\Models\Ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    public function show(Ticket $ticket)
+    public function show(Request $request)
     {
         //
+        $tiicket = Ticket::all();
+
+        return view('show', compact('ticket'));
     }
 
     /**
