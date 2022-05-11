@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('category');
-            $table->string('prioity');
-            $table->string('Status');
-            $table->text('message');
+            $table->string('category')->nullable();
+            $table->string('prioity')->nullable();
+            $table->string('Status')->nullable();
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }

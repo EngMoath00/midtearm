@@ -16,6 +16,6 @@ use App\Http\Controllers\TicketController;
 
 
 Route::get('/', [TicketController::class, 'index'])->name('index.ticket');
-Route::get('/create', [ContactController::class, 'create'])->name('create.ticket');
-Route::post('/store', [ContactController::class, 'store'])->name('store.ticket');
+Route::get('/create', [TicketController::class, 'create'])->name('create.ticket');
+Route::post('/store', [TicketController::class, 'store'])->name('store.ticket');
 Route::POST('/show', [TicketController::class, ''])->name('show.ticket');

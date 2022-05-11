@@ -27,7 +27,7 @@ class TicketController extends Controller
         $ticket = new Ticket();
         $ticket->title = $request->title;
         $ticket->Category = $request->Category;
-        $ticket->priority = $request->priority;
+        $ticket->prioity = $request->prioity;
         $ticket->Message = $request->Message;
         $ticket->save();
 
