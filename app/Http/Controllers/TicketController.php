@@ -43,7 +43,7 @@ class TicketController extends Controller
     public function show(Request $request)
     {
         //
-        $tiicket = Ticket::all();
+        $ticket = Ticket::all();
 
         return view('show', compact('ticket'));
     }

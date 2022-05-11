@@ -9,7 +9,7 @@
 
                       <div class="panel-body">
 
-                          @foreach ($tiicket as $index => $ticket)
+                          @foreach ($ticket as $index => $ticket)
                               <div class="ticket-info">
                                   <p>Ticket no. {{ ++$index }}</p>
                                   <p>{{ $ticket->Categry }}</p>
